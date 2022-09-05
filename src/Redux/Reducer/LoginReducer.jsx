@@ -27,7 +27,7 @@ const LoginReducer = (state = keberhasilan, action) => {
         ...state,
         apalogin: false,
         tunggucoy: false,
-        gagalcuy: true,
+        gagalcuy: action.payload,
       };
     default:
       return state;

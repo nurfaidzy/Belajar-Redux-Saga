@@ -17,11 +17,7 @@ const Logins = () => {
 
   const onSubmit = (data) => dispatch(CobaLogin(data));
 
-  const { gagalcuy, apalogin, tunggucoy } = useSelector(
-    (state) => state.LoginReducer
-  );
-
-  console.log(gagalcuy);
+  const { gagalcuy, tunggucoy } = useSelector((state) => state.LoginReducer);
 
   return (
     <div className="flex justify-center py-10">
@@ -62,7 +58,7 @@ const Logins = () => {
           </div>
         </form>
         <div className="text-center">
-          {gagalcuy && <p>anda tidak dapat masuk</p>}
+          {gagalcuy && <p>{gagalcuy.response.data.error}</p>}
         </div>
         <div className="text-center p-2">
           Belum punya akun?
