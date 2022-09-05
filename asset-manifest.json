@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Belajar-Redux-Saga/static/css/main.c54fc462.css",
-    "main.js": "/Belajar-Redux-Saga/static/js/main.dc48f623.js",
+    "main.js": "/Belajar-Redux-Saga/static/js/main.1e2b3de7.js",
     "static/js/787.562754fa.chunk.js": "/Belajar-Redux-Saga/static/js/787.562754fa.chunk.js",
     "index.html": "/Belajar-Redux-Saga/index.html",
     "main.c54fc462.css.map": "/Belajar-Redux-Saga/static/css/main.c54fc462.css.map",
-    "main.dc48f623.js.map": "/Belajar-Redux-Saga/static/js/main.dc48f623.js.map",
+    "main.1e2b3de7.js.map": "/Belajar-Redux-Saga/static/js/main.1e2b3de7.js.map",
     "787.562754fa.chunk.js.map": "/Belajar-Redux-Saga/static/js/787.562754fa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c54fc462.css",
-    "static/js/main.dc48f623.js"
+    "static/js/main.1e2b3de7.js"
   ]
 }
