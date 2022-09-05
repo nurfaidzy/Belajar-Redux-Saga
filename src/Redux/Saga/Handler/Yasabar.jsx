@@ -16,11 +16,9 @@ function* YaSabar(action) {
   axios.interceptors.request.use(
     (req) => {
       // Add configurations here
-      console.log("masuk pak eko");
       return req;
     },
     (err) => {
-      console.log("ini req g " + err);
       return Promise.reject(err);
     }
   );
@@ -28,16 +26,12 @@ function* YaSabar(action) {
   axios.interceptors.response.use(
     (res) => {
       // Add configurations here
-      console.log("berhasil respon");
-      console.log(res);
       if (res.status === 201) {
         res = "sukses cuy";
       }
       return res;
     },
     (err) => {
-      console.log("yagagal");
-      console.log(err);
       return Promise.reject(err);
     }
   );
@@ -49,7 +43,6 @@ function* YaSabar(action) {
     });
     yield put({ type: ANJAY_MASUK });
   } catch (err) {
-    console.log("hasil final" + err);
     yield put({ type: YAH_GAGAL, payload: err });
   }
 }

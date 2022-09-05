@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { CobaLogin } from "../../../Redux/Action/LoginAction";
 
 const Logins = () => {
+  const base = "Belajar-Redux-Saga";
+
   const {
     register,
     handleSubmit,
@@ -62,7 +64,7 @@ const Logins = () => {
         </div>
         <div className="text-center p-2">
           Belum punya akun?
-          <a href="/home" className="font-bold text-orange-400">
+          <a href={base + "/Register"} className="font-bold text-orange-400">
             MARI
           </a>
         </div>
