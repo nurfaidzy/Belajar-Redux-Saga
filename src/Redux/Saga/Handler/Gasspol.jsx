@@ -22,8 +22,9 @@ function* Gasspol() {
   );
 
   try {
-    const res = yield axios.get("https://reqres.in/api/users?page=2");
-    yield put({ type: JADI_NIEH, payload: res });
+    const res = yield axios.get("https://reqres.in/api/users?page=1");
+    const kirim = res.data.data;
+    yield put({ type: JADI_NIEH, payload: kirim });
   } catch (error) {
     yield put({ type: ERROR_DATA, payload: error });
   }

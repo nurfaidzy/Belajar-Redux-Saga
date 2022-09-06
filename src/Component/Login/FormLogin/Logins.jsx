@@ -6,6 +6,8 @@ import ValidasiLogin from "../ValidasiLogin/ValidasiLogin";
 import { useDispatch, useSelector } from "react-redux";
 import { CobaLogin } from "../../../Redux/Action/LoginAction";
 
+import { useNavigate } from "react-router-dom";
+
 const Logins = () => {
   const base = "Belajar-Redux-Saga";
 
@@ -19,7 +21,11 @@ const Logins = () => {
 
   const onSubmit = (data) => dispatch(CobaLogin(data));
 
-  const { gagalcuy, tunggucoy } = useSelector((state) => state.LoginReducer);
+  const { gagalcuy, apalogin, tunggucoy } = useSelector(
+    (state) => state.LoginReducer
+  );
+  const navigate = useNavigate();
+  apalogin && navigate("/" + base + "/Home");
 
   return (
     <div className="flex justify-center py-10">
