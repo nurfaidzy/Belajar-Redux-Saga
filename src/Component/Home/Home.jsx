@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Navbar from "../Navbar/Navbar";
 import { CobaSiData } from "./../../Redux/Action/Home";
 
 const Home = () => {
@@ -11,7 +12,10 @@ const Home = () => {
 
   return (
     <div>
-      <div className="flex justify-center pt-[5%] ">
+      <div className="px-[5%] py-[1%] shadow-md fixed w-full bg-white">
+        <Navbar />
+      </div>
+      <div className="flex justify-center pt-[5%]  ">
         {data ? (
           <div className="grid grid-cols-3 gap-20">
             {data.data.map((x, i) => (
