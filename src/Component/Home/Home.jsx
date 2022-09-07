@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Navbar from "../Navbar/Navbar";
+import Pagenation from "../Pagenation/Pagenation";
 import { CobaSiData } from "./../../Redux/Action/Home";
 
 const Home = () => {
@@ -44,6 +45,9 @@ const Home = () => {
         ) : (
           <div>kosong</div>
         )}
+      </div>
+      <div>
+        <Pagenation />
       </div>
     </div>
   );

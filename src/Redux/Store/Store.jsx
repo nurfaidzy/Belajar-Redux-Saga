@@ -11,6 +11,8 @@ import RegisterReducer from "../Reducer/RegisterReducer";
 import RegisterSaga from "../Saga/Watcher/RegisterSaga";
 import Homesaga from "../Saga/Watcher/Homesaga";
 import LogoutSaga from "../Saga/Watcher/LogoutSaga";
+import NextLah from "../Saga/Watcher/NextLah";
+import Backcuy from "../Saga/Watcher/Backcuy";
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -29,5 +31,7 @@ sagaMiddleware.run(LoginSaga);
 sagaMiddleware.run(RegisterSaga);
 sagaMiddleware.run(Homesaga);
 sagaMiddleware.run(LogoutSaga);
+sagaMiddleware.run(NextLah);
+sagaMiddleware.run(Backcuy);
 
 export default store;

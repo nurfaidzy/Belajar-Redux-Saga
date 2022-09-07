@@ -1,11 +1,10 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+// import { useSelector } from "react-redux";
 import { KeluarKau } from "../../Redux/Action/LogoutAction";
 
 const Logout = () => {
   const dispatch = useDispatch();
-  const { keluar, loading } = useSelector((state) => state.LogoutReducer);
-  console.log(keluar);
-  console.log(loading);
+  // const { keluar, loading } = useSelector((state) => state.LogoutReducer);
 
   return (
     <div>
