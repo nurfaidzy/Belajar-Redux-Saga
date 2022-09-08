@@ -7,7 +7,7 @@ function* Halamannya(action) {
 
   try {
     const res = yield axios.get("https://reqres.in/api/users?page=" + payload);
-    const kirim = res.data.data;
+    const kirim = res.data;
     yield put({ type: JADI_NIEH, payload: kirim });
   } catch (error) {
     yield put({ type: ERROR_DATA, payload: error });
