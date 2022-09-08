@@ -1,11 +1,15 @@
 import { useDispatch } from "react-redux";
-// import { useSelector } from "react-redux";
+
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { KeluarKau } from "../../Redux/Action/LogoutAction";
 
 const Logout = () => {
+  const base = "Belajar-Redux-Saga";
   const dispatch = useDispatch();
-  // const { keluar, loading } = useSelector((state) => state.LogoutReducer);
-
+  const navigate = useNavigate();
+  const { apalogin } = useSelector((state) => state.LoginReducer);
+  apalogin === false && navigate("/" + base + "/Login");
   return (
     <div>
       <button

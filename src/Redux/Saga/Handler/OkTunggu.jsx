@@ -1,5 +1,6 @@
 import axios from "axios";
 import { put } from "redux-saga/effects";
+import { ANJAY_MASUK } from "../../Action/LoginAction";
 import { DI_TERIMA, DI_TOLAK } from "./../../Action/RegisterAction";
 
 function* OkTunggu(action) {
@@ -27,6 +28,7 @@ function* OkTunggu(action) {
       localStorage.setItem("token", res.data.token);
     });
     yield put({ type: DI_TERIMA });
+    yield put({ type: ANJAY_MASUK });
   } catch (error) {
     yield put({ type: DI_TOLAK, payload: error });
   }

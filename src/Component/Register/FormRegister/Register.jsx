@@ -6,6 +6,8 @@ import ValidasiRegister from "../ValidasiRegister/ValidasiRegister";
 import { useDispatch, useSelector } from "react-redux";
 import { KuRegis } from "../../../Redux/Action/RegisterAction";
 
+import { useNavigate } from "react-router-dom";
+
 const Register = () => {
   const base = "Belajar-Redux-Saga";
 
@@ -21,6 +23,10 @@ const Register = () => {
 
   const { woptunggu, maaf } = useSelector((state) => state.RegisterReducer);
 
+  const { apalogin } = useSelector((state) => state.LoginReducer);
+
+  const navigate = useNavigate();
+  apalogin && navigate("/" + base + "/Home");
   return (
     <div className="flex justify-center py-10 text-center">
       <div>

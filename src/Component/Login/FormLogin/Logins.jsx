@@ -70,7 +70,10 @@ const Logins = () => {
         </div>
         <div className="text-center p-2">
           Belum punya akun?
-          <a href={base + "/Register"} className="font-bold text-orange-400">
+          <a
+            href={"/" + base + "/Register"}
+            className="font-bold text-orange-400"
+          >
             MARI
           </a>
         </div>
