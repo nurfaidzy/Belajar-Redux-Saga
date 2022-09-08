@@ -13,7 +13,7 @@ const Pagenation = () => {
         {sekarang !== 1 ? (
           <div
             className="p-2 bg-orange-400 rounded-l-lg"
-            onClick={() => dispatch(Sebelum(1))}
+            onClick={() => dispatch(Sebelum(sekarang - 1))}
           >
             <p>{"<<"} </p>
           </div>

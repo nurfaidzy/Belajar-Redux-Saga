@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Navbar from "../Navbar/Navbar";
 import Pagenation from "../Pagenation/Pagenation";
 import { CobaSiData } from "./../../Redux/Action/Home";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -10,6 +11,11 @@ const Home = () => {
   useEffect(() => {
     dispatch(CobaSiData());
   }, [dispatch]);
+
+  const { apalogin } = useSelector((state) => state.LoginReducer);
+  const base = "Belajar-Redux-Saga";
+  const navigate = useNavigate();
+  apalogin === false && navigate("/" + base + "/Login");
 
   return (
     <div>
